@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include stock_ledger_report *.css
+recursive-include stock_ledger_report *.csv
+recursive-include stock_ledger_report *.html
+recursive-include stock_ledger_report *.ico
+recursive-include stock_ledger_report *.js
+recursive-include stock_ledger_report *.json
+recursive-include stock_ledger_report *.md
+recursive-include stock_ledger_report *.png
+recursive-include stock_ledger_report *.py
+recursive-include stock_ledger_report *.svg
+recursive-include stock_ledger_report *.txt
+recursive-exclude stock_ledger_report *.pyc

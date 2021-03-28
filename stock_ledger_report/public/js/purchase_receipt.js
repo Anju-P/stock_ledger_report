@@ -1,4 +1,4 @@
-frappe.ui.form.on('Stock Entry', {
+frappe.ui.form.on('Purchase Receipt', {
    
     on_submit: function (frm, cdt, cdn) {
         $.each(frm.doc.items || [], function (i, s) {
@@ -11,7 +11,7 @@ frappe.ui.form.on('Stock Entry', {
                     'voucher_no':frm.doc.name
             },
             callback: function (r) {
-
+alert("success")
             }
         })
     })

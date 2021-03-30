@@ -11,7 +11,7 @@ frappe.ui.form.on('Stock Entry', {
                     'voucher_no':frm.doc.name
             },
             callback: function (r) {
-
+alert("Success")
             }
         })
     })

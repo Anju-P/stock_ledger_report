@@ -93,6 +93,41 @@ frappe.query_reports["Stock Ledger Report"] = {
 			"options": "Vendor",
 			
 		},
+		{
+			"fieldname":"color",
+			"label": __("Color"),
+			"fieldtype": "Link",
+			"options": "Color",
+			
+		},
+		{
+			"fieldname":"shape",
+			"label": __("Shape"),
+			"fieldtype": "Link",
+			"options": "Shape",
+			
+		},
+		{
+			"fieldname":"model_no",
+			"label": __("Model No"),
+			"fieldtype": "Link",
+			"options": "Model Number",
+			
+		},
+		{
+			"fieldname":"watt",
+			"label": __("Watt"),
+			"fieldtype": "Link",
+			"options": "Watt",
+			
+		},
+		{
+			"fieldname":"current",
+			"label": __("Current"),
+			"fieldtype": "Link",
+			"options": "Current",
+			
+		},
 	]
 }
 

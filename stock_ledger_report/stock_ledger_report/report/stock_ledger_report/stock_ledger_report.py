@@ -71,7 +71,13 @@ def get_columns():
 		{"label": _("Serial #"), "fieldname": "serial_no", "width": 100},
 		{"label": _("Project"), "fieldname": "project", "fieldtype": "Link", "options": "Project", "width": 100},
 		{"label": _("Company"), "fieldname": "company", "fieldtype": "Link", "options": "Company", "width": 110},
-		{"label": _("Vendor"), "fieldname": "vendor", "fieldtype": "Link", "options": "Vendor", "width": 110}
+		{"label": _("Vendor"), "fieldname": "vendor", "fieldtype": "Link", "options": "Vendor", "width": 110},
+		{"label": _("Color"), "fieldname": "color", "fieldtype": "Link", "options": "Color", "width": 110},
+		{"label": _("Shape"), "fieldname": "shape", "fieldtype": "Link", "options": "Shape", "width": 110},
+		{"label": _("Model No"), "fieldname": "model_no", "fieldtype": "Link", "options": "Model Number", "width": 110},
+		{"label": _("Watt"), "fieldname": "watt", "fieldtype": "Link", "options": "Watt", "width": 110},
+		{"label": _("Current"), "fieldname": "current", "fieldtype": "Link", "options": "Current", "width": 110},
+		
 	]
 
 	return columns
@@ -83,7 +89,7 @@ def get_stock_ledger_entries(filters, items):
 			.format(', '.join([frappe.db.escape(i) for i in items]))
 
 	return frappe.db.sql("""select concat_ws(" ", posting_date, posting_time) as date,
-			item_code, warehouse,vendor, actual_qty, qty_after_transaction, incoming_rate, valuation_rate,
+			item_code, warehouse,vendor, color, shape, model_no, watt, current, brand, actual_qty, qty_after_transaction, incoming_rate, valuation_rate,
 			stock_value, voucher_type, voucher_no, batch_no, serial_no, company, project, stock_value_difference
 		from `tabStock Ledger Entry` sle
 		where company = %(company)s and
